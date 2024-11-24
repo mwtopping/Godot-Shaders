@@ -1,0 +1,47 @@
+[gd_scene load_steps=9 format=3 uid="uid://ccfv818meby18"]
+
+[ext_resource type="Shader" path="res://helloworld.gdshader" id="1_eccw6"]
+[ext_resource type="Texture2D" path="res://icon.svg" id="2_paxan"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qfgc7"]
+shader = ExtResource("1_eccw6")
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ep247"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nm34c"]
+shader = ExtResource("1_eccw6")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_kptvx"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rrxm8"]
+shader = ExtResource("1_eccw6")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_83ld4"]
+shader = ExtResource("1_eccw6")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_qfgc7")
+position = Vector2(572, 111)
+scale = Vector2(225.285, 196.75)
+texture = SubResource("PlaceholderTexture2D_ep247")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+material = SubResource("ShaderMaterial_nm34c")
+position = Vector2(-134, 440)
+texture = SubResource("CanvasTexture_kptvx")
+polygon = PackedVector2Array(-60, 0, 90, 0, 90, 80, -60, 80)
+
+[node name="Icon" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_rrxm8")
+position = Vector2(323, 106)
+scale = Vector2(1.46875, 1.32031)
+texture = ExtResource("2_paxan")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_83ld4")
+offset_left = 52.0
+offset_top = 256.0
+offset_right = 331.0
+offset_bottom = 477.0
